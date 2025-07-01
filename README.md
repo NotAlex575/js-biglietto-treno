@@ -29,16 +29,22 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 
 6  usiamo il parseInt() per convertire il valore inserito in input da stringa a int
 
-7  ? se l'utente ha un'età inferiore a 18 (minorenne) allora:
+7 calcoliamo il prezzo totale -> let prezzo = numero_km * prezzo_Km;
 
-  7.1  calcola il prezzo del biglietto con il 20% di sconto [(0.21 * numero_ore_viaggio) * 20] / 100
+8  ? se l'utente ha un'età inferiore a 18 (minorenne) allora:
 
-8  altrimenti ? se l'utente ha un'età maggiore ai 65 anni (over 65) allora:
+  8.1  calcola il prezzo del biglietto con il 20% di sconto -> prezzo = prezzo - (prezzo * 0.20);
 
-  8.1 calcola il prezzo del biglietto con il 40% di sconto [(0.21 * numero_ore_viaggio) * 20] / 100
+  8.2  calcolato il prezzo totale (sconto minorenne), stampiamo il valore, ottenendo in output solo il valore con al massimo 2 valori decimali (utilizzando il toFixed)
 
-9  altrimenti:
+9  altrimenti ? se l'utente ha un'età maggiore ai 65 anni (over 65) allora:
 
-  9,1  calcola il prezzo in base ai chilometri da percorrere moltiplicato 0.21 -> numero_ore_viaggio * 0.21
+  9.1 calcola il prezzo del biglietto con il 40% di sconto -> prezzo = prezzo - (prezzo * 0.40);
 
-10  calcolato il prezzo totale, stampiamo il valore, ottenendo in output solo il valore con al massimo 2 valori decimali (utilizzando il toFixed)
+  9.2  calcolato il prezzo totale (sconto over 65), stampiamo il valore, ottenendo in output solo il valore con al massimo 2 valori decimali (utilizzando il toFixed)
+
+10  altrimenti:
+
+  10,1  calcola il prezzo in base ai chilometri da percorrere moltiplicato 0.21 -> numero_ore_viaggio * 0.21
+
+  10.2  stampiamo il valore del prezzo ottenuto (senza sconti), ottenendo in output solo il valore con al massimo 2 valori decimali (utilizzando il toFixed)
