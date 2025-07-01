@@ -17,7 +17,7 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 100km, 70 anni => prezzo corretto: €12.60,
 
 
-1  chiediamo all'utente quanti chilometri deve percorrere (numero-ore) 
+1  chiediamo all'utente quanti chilometri deve percorrere (numero_ore) 
 
 2  mettiamo in input quanti chilometri deve percorrere (usando il prompt)
 
@@ -31,14 +31,14 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 
 7  ? se l'utente ha un'età inferiore a 18 (minorenne) allora:
 
-  7.1  calcola il prezzo del biglietto con il 20% di sconto [(0.21 * numero-ore-viaggio) * 20] / 100
+  7.1  calcola il prezzo del biglietto con il 20% di sconto [(0.21 * numero_ore_viaggio) * 20] / 100
 
 8  altrimenti ? se l'utente ha un'età maggiore ai 65 anni (over 65) allora:
 
-  8.1 calcola il prezzo del biglietto con il 40% di sconto [(0.21 * numero-ore-viaggio) * 20] / 100
+  8.1 calcola il prezzo del biglietto con il 40% di sconto [(0.21 * numero_ore_viaggio) * 20] / 100
 
 9  altrimenti:
 
-  9,1  calcola il prezzo in base ai chilometri da percorrere moltiplicato 0.21 -> numero-ore-viaggio * 0.21
+  9,1  calcola il prezzo in base ai chilometri da percorrere moltiplicato 0.21 -> numero_ore_viaggio * 0.21
 
 10  calcolato il prezzo totale, stampiamo il valore, ottenendo in output solo il valore con al massimo 2 valori decimali (utilizzando il toFixed)
