@@ -1,73 +1,44 @@
-<h1 align="center">Js Biglietto Treno</h1>
+Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/js-biglietto-treno?color=56BEB8">
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/js-biglietto-treno?color=56BEB8">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/js-biglietto-treno?color=56BEB8">
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/js-biglietto-treno?color=56BEB8">
-</p>
+Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
-</p>
+il prezzo del biglietto è definito in base ai km (0.21 € al km),
+va applicato uno sconto del 20% per i minorenni,
+va applicato uno sconto del 40% per gli over 65.,
+L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.,
 
-<br>
+Realizzate prima un file README.md in cui mettere il testo dell'esercizio e scomponente il problema in sotto problemi. 
+Numero minimo di push: 5
 
-## :dart: About ##
+TIP:
+per controllare che la vostra logica sui prezzi funzioni correttamente, provate a verificare quanto segue:
 
-Describe your project
-
-## :sparkles: Features ##
-
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
-
-## :rocket: Technologies ##
-
-The following tools were used in this project:
-
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-
-## :white_check_mark: Requirements ##
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting ##
-
-```bash
-# Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/js-biglietto-treno
-
-# Access
-$ cd js-biglietto-treno
-
-# Install dependencies
-$ yarn
-
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
-```
-
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
+100km, 10 anni => prezzo corretto:  €16.80,
+100km, 70 anni => prezzo corretto: €12.60,
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+1  chiediamo all'utente quanti chilometri deve percorrere (numero-ore) 
 
-&#xa0;
+2  mettiamo in input quanti chilometri deve percorrere (usando il prompt)
 
-<a href="#top">Back to top</a>
+3  usiamo il parseInt() per convertire il valore inserito in input da stringa a int
+
+4  chiediamo all'utente la sua età (per vedere se applicare lo sconto)
+
+5  mettiamo in input l'età dell'utente (usando il prompt)
+
+6  usiamo il parseInt() per convertire il valore inserito in input da stringa a int
+
+7  ? se l'utente ha un'età inferiore a 18 (minorenne) allora:
+
+  7.1  calcola il prezzo del biglietto con il 20% di sconto [(0.21 * numero-ore-viaggio) * 20] / 100
+
+8  altrimenti ? se l'utente ha un'età maggiore ai 65 anni (over 65) allora:
+
+  8.1 calcola il prezzo del biglietto con il 40% di sconto [(0.21 * numero-ore-viaggio) * 20] / 100
+
+9  altrimenti:
+
+  9,1  calcola il prezzo in base ai chilometri da percorrere moltiplicato 0.21 -> numero-ore-viaggio * 0.21
+
+10  calcolato il prezzo totale, stampiamo il valore, ottenendo in output solo il valore con al massimo 2 valori decimali (utilizzando il toFixed)
